@@ -109,14 +109,14 @@ class CalculatorTest {
     void testDotBeforeDash(){
         Calculator calc = new Calculator();
 
-        calc.pressDigitKey(5);
+        calc.pressDigitKey(4);
         calc.pressBinaryOperationKey("-");
         calc.pressDigitKey(4);
         calc.pressBinaryOperationKey("x");
         calc.pressDigitKey(4);
         calc.pressEqualsKey();
 
-        String expected = "-11";
+        String expected = "-12";
         String actual = calc.readScreen();
 
         assertEquals(expected, actual);
