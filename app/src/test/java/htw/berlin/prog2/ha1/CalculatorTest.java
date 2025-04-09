@@ -104,6 +104,23 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    @DisplayName("should display result after dot before dash")
+    void testDotBeforeDash(){
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(5);
+        calc.pressBinaryOperationKey("-");
+        calc.pressDigitKey(4);
+        calc.pressBinaryOperationKey("x");
+        calc.pressDigitKey(4);
+        calc.pressEqualsKey();
+
+        String expected = "-11";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+    }
 
 
     //TODO hier weitere Tests erstellen
