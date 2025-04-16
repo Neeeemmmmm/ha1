@@ -110,13 +110,27 @@ class CalculatorTest {
         Calculator calc = new Calculator();
 
         calc.pressDigitKey(4);
-        calc.pressBinaryOperationKey("-");
+        calc.pressBinaryOperationKey("20");
         calc.pressDigitKey(4);
         calc.pressBinaryOperationKey("x");
         calc.pressDigitKey(4);
         calc.pressEqualsKey();
 
-        String expected = "-12";
+        String expected = "20";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    @DisplayName("should display result after you press digit and press Dot, so give us the same Digit without Dot  as result")
+    void testPressOperatingKeyandPressEqualKey(){
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(1);
+        calc.pressDotKey();
+        calc.pressEqualsKey();
+
+        String expected = "1";
         String actual = calc.readScreen();
 
         assertEquals(expected, actual);
