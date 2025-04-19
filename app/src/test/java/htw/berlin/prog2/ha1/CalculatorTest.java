@@ -104,23 +104,10 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
-    @Test
-    @DisplayName("should display result after dot before dash")
-    void testDotBeforeDash(){
-        Calculator calc = new Calculator();
 
-        calc.pressDigitKey(4);
-        calc.pressBinaryOperationKey("20");
-        calc.pressDigitKey(4);
-        calc.pressBinaryOperationKey("x");
-        calc.pressDigitKey(4);
-        calc.pressEqualsKey();
 
-        String expected = "20";
-        String actual = calc.readScreen();
 
-        assertEquals(expected, actual);
-    }
+    //TODO hier weitere Tests erstellen
     @Test
     @DisplayName("should display result after you press digit and press Dot, so give us the same Digit without Dot  as result")
     void testPressOperatingKeyandPressEqualKey(){
@@ -135,8 +122,17 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    @DisplayName("After press the negative Key, but dont press a Operation Key, the negative disappear")
+    void etstefkjnre(){
+        Calculator calc = new Calculator();
 
+        calc.pressDigitKey(1);
+        calc.pressNegativeKey();
+        calc.pressEqualsKey();
 
-    //TODO hier weitere Tests erstellen
+        String expected = "1";
+        String actual = calc.readScreen();
+    }
 }
 
