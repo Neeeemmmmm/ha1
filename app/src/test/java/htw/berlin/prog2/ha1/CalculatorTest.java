@@ -134,5 +134,18 @@ class CalculatorTest {
         String expected = "1";
         String actual = calc.readScreen();
     }
+  @Test
+    @DisplayName("After press the negative Key, but dont press a Operation Key, the negative disappear")
+    void lwfeons() {
+      Calculator calc = new Calculator();
+
+      calc.pressDigitKey(1);
+      calc.pressBinaryOperationKey("-");
+      calc.pressDigitKey(2);
+      calc.pressEqualsKey();
+
+      String expected = "-1";
+      String actual = calc.readScreen();
+  }
 }
 
