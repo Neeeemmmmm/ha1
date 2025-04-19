@@ -123,7 +123,9 @@ public class Calculator {
             screen = screen.substring(0,screen.length()-1);
             return;
         }
-
+        if(screen.startsWith("-")){
+            screen = screen.substring(1);
+            return;
         }
         var result = switch(latestOperation) {
 
