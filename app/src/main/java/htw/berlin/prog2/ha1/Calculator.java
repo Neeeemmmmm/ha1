@@ -119,11 +119,12 @@ public class Calculator {
      * und das Ergebnis direkt angezeigt.
      */
     public void pressEqualsKey() {
+
         if(screen.endsWith(".")){
             screen = screen.substring(0,screen.length()-1);
             return;
         }
-        if(screen.startsWith("-")){
+        if(screen.startsWith("-")) {
             screen = screen.substring(1);
             return;
         }
