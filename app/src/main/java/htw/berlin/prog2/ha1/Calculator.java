@@ -118,7 +118,7 @@ public class Calculator {
      * Operation (ggf. inklusive letztem Operand) erneut auf den aktuellen Bildschirminhalt angewandt
      * und das Ergebnis direkt angezeigt.
      * Wurde eine Zahl und dann direkt ein Negativ Key oder ein Dot gedrückt, aber kein Operanten Taste danach gedrückt
-     * und es wurde dann direkt die "=" Teste gedrückt,
+     * und es wurde dann direkt die "=" Taste gedrückt,
      * dann wird die Zahl einfach Positiv wieder angezeigt ohne Vorzeichen oder Dot.
      */
     public void pressEqualsKey() {
